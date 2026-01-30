@@ -263,19 +263,19 @@ class PrayerTimes {
 
     updateUI(prayerTimes) {
     document.getElementById("fajr").innerText =
-      this.nearest5Custom2(this.format12Hour(prayerTimes.fajr),1);
+      this.nearest5Custom2(this.format12Hour(new Date(rayerTimes.fajr)),1);
 
     document.getElementById("dhuhr").innerText = "01:10 pm";
       this.format12Hour(prayerTimes.dhuhr);
 
     document.getElementById("asr").innerText =
-      this.nearest5Custom2(this.format12Hour(prayerTimes.asr),3);
+      this.nearest5Custom2(this.format12Hour(new Date(prayerTimes.asr)),3);
 
     document.getElementById("maghrib").innerText =
-      this.nearest5Custom2(this.format12Hour(prayerTimes.maghrib),4);
+      this.nearest5Custom2(this.format12Hour(new Date(prayerTimes.maghrib)),4);
 
     document.getElementById("isha").innerText =
-      this.nearest5Custom2(this.format12Hour(prayerTimes.isha),5);
+      this.nearest5Custom2(this.format12Hour(new Date(prayerTimes.isha)),5);
   } 
 
       // Example output
@@ -325,6 +325,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 </body>
 </html>
+
 
 
 
