@@ -264,7 +264,7 @@ class PrayerTimes {
 
 // INIT
 const prayerTimes = new PrayerTimes(
-  "http://103.30.154.97:8089/api/prayer-times"
+  "https://corsproxy.io/?http://103.30.154.97:8089/api/prayer-times"
 );
 
 // Load on page load
@@ -274,3 +274,4 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 </body>
 </html>
+
