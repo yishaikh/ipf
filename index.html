@@ -277,7 +277,6 @@ class PrayerTimesUI {
 }),1);
 
     document.getElementById("dhuhr").innerText = "01:10 pm";
-      this.format12Hour(prayerTimes.dhuhr);
 
     document.getElementById("asr").innerText =
       this.nearest5Custom2(new Date(prayerTimes.asr).toLocaleTimeString("en-IN", {
@@ -345,6 +344,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 </body>
 </html>
+
 
 
 
