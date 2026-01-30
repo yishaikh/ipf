@@ -241,7 +241,7 @@
         </div>
     </footer>
 <script>
-// <script src="https://cdn.jsdelivr.net/npm/adhan/dist/adhan.umd.min.js"></script>    
+   
 class PrayerTimesUI {
   constructor() {
     this.init();
@@ -263,13 +263,13 @@ class PrayerTimesUI {
     const date = new Date();
     date.setMinutes(date.getMinutes() + 330);
     const prayerTimes = new PrayerTimes(coordinates, date, params);
-
+    console.log(prayerTimes);
     this.updateUI(prayerTimes);
   }  
 
     updateUI(prayerTimes) {
     document.getElementById("fajr").innerText =
-      this.nearest5Custom2(new Date(this.prayerTimes.fajr).toLocaleTimeString("en-IN", {
+      this.nearest5Custom2(new Date(prayerTimes.fajr).toLocaleTimeString("en-IN", {
     hour: "numeric",
     minute: "2-digit",
     hour12: false,
@@ -344,6 +344,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 </body>
 </html>
+
 
 
 
