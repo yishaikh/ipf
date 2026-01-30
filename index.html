@@ -308,7 +308,7 @@ class PrayerTimes {
   //   });
   // }  
     
-  function nearest5Custom2(time,prayerno) {
+  nearest5Custom2(time,prayerno) {
     let [hour, minute] = time.split(':').map(Number);
     if (prayerno != 4){
         const base = Math.floor(minute / 10) * 10;
@@ -345,6 +345,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 </body>
 </html>
+
 
 
 
