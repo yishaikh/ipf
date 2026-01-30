@@ -299,14 +299,14 @@ class PrayerTimes {
   } 
 
       // Example output
-  function format12Hour(time) {
-    return time.toLocaleTimeString('en-IN', {
-      hour: 'numeric',
-      minute: '2-digit',
-      hour12: false,
-      timeZone: "Asia/Kolkata"  
-    });
-  }  
+  // function format12Hour(time) {
+  //   return time.toLocaleTimeString('en-IN', {
+  //     hour: 'numeric',
+  //     minute: '2-digit',
+  //     hour12: false,
+  //     timeZone: "Asia/Kolkata"  
+  //   });
+  // }  
     
   function nearest5Custom2(time,prayerno) {
     let [hour, minute] = time.split(':').map(Number);
@@ -345,6 +345,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 </body>
 </html>
+
 
 
 
