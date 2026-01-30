@@ -254,10 +254,10 @@ class PrayerTimesUI {
 
     const params = CalculationMethod.Karachi();
     params.madhab = Madhab.Shafi;
-    params.adjustments[Prayer.Fajr] = 25;
-    params.adjustments[Prayer.Asr] = 20;
-    params.adjustments[Prayer.Maghrib] = 8;
-    params.adjustments[Prayer.Isha] = 25;  
+    params.adjustments[this.Prayer.Fajr] = 25;
+    params.adjustments[this.Prayer.Asr] = 20;
+    params.adjustments[this.Prayer.Maghrib] = 8;
+    params.adjustments[this.Prayer.Isha] = 25;  
 
     // ✅ Browser local time (India auto)
     const date = new Date();
@@ -345,6 +345,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 </body>
 </html>
+
 
 
 
