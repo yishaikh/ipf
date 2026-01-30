@@ -340,8 +340,8 @@ class PrayerTimesUI {
     }
     var period = hour >= 12 ? 'pm' : 'am';
     hour = hour % 12 || 12;
-    _returnvalue = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')} ${period}`;
-    return _returnvalue;
+    // _returnvalue = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')} ${period}`;
+    return `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')} ${period}`;
 }  
 }
 
@@ -352,6 +352,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 </body>
 </html>
+
 
 
 
