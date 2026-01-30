@@ -263,19 +263,39 @@ class PrayerTimes {
 
     updateUI(prayerTimes) {
     document.getElementById("fajr").innerText =
-      this.nearest5Custom2(this.format12Hour(this.prayerTimes.fajr),1);
+      this.nearest5Custom2(new Date(this.prayerTimes.fajr).toLocaleTimeString("en-IN", {
+    hour: "numeric",
+    minute: "2-digit",
+    hour12: false,
+    timeZone: "Asia/Kolkata" // IMPORTANT
+}),1);
 
     document.getElementById("dhuhr").innerText = "01:10 pm";
       this.format12Hour(prayerTimes.dhuhr);
 
     document.getElementById("asr").innerText =
-      this.nearest5Custom2(this.format12Hour(this.prayerTimes.asr),3);
+      this.nearest5Custom2(new Date(prayerTimes.asr).toLocaleTimeString("en-IN", {
+    hour: "numeric",
+    minute: "2-digit",
+    hour12: false,
+    timeZone: "Asia/Kolkata" // IMPORTANT
+}),3);
 
     document.getElementById("maghrib").innerText =
-      this.nearest5Custom2(this.format12Hour(this.prayerTimes.maghrib),4);
+      this.nearest5Custom2(new Date(prayerTimes.maghrib).toLocaleTimeString("en-IN", {
+    hour: "numeric",
+    minute: "2-digit",
+    hour12: false,
+    timeZone: "Asia/Kolkata" // IMPORTANT
+}),4);
 
     document.getElementById("isha").innerText =
-      this.nearest5Custom2(this.format12Hour(this.prayerTimes.isha),5);
+      this.nearest5Custom2(new Date(prayerTimes.isha).toLocaleTimeString("en-IN", {
+    hour: "numeric",
+    minute: "2-digit",
+    hour12: false,
+    timeZone: "Asia/Kolkata" // IMPORTANT
+}),5);
   } 
 
       // Example output
@@ -325,6 +345,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 </body>
 </html>
+
 
 
 
